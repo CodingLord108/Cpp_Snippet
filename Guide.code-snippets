@@ -1,0 +1,23 @@
+{
+	"": {
+		"prefix": "guide",
+		"scope": "cpp",
+		"body": [
+		  "/*",
+		  "--GraphTheory",
+		  "Depth First Search  -->dfs",
+		  "Breadth First Search-->bfs",
+		  "",
+		  "--binary",
+		  "Binary Search         -->binSer",
+		  "Binary Exponentiation -->bin_exp",
+		  "",
+		  "--Utilities",
+		  "Debugging Tool        -->debugger",
+		  "File Input-Output     -->fileio",
+		  "Array input           -->inArray",
+		  "*/"
+		],
+		"description": ""
+	  }
+}

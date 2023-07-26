@@ -1,0 +1,24 @@
+{
+	"Palindrome": {
+		"prefix": "isPalindrome",
+		"scope": "cpp",
+		"body": [
+		  "//it check if the given sequence is in pallindrome or not.",
+		  "template<class T>bool isPalindrom(T &s){",
+		  "    T p=s;",
+		  "    reverse(p.begin(),p.end());",
+		  "    if(p==s)return true;",
+		  "    else {return false;}",
+		  "}"
+		],
+		"description": ""
+	  },
+	  "Ckecking": {
+		"prefix": "kcl",
+		"scope": "cpp",
+		"body": [
+			"auwygefoqwugfoqwevfo\tub",
+		],
+		"description": ""
+	  }
+}

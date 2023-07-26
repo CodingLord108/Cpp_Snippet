@@ -1,0 +1,81 @@
+{
+	"Initialise Debugging Environment": {
+		"prefix": "debugger",
+		"scope": "cpp",
+		"body": [
+		  "//debug(x)-->analyse 'x'//",
+		  "#ifndef ONLINE_JUDGE",
+		  "#define debug(x) cerr<<\"(Line \"<<__LINE__<<\"):\"<<#x << \" \";_print_(x);cerr<<endl;",
+		  "#define debugarr(x,y) cerr<<\"(Line \"<<__LINE__<<\"):\"<<#x<<\" \";_print_(x,y);cerr<<endl;",
+		  "#define cl() cerr<<endl;",
+		  "#else",
+		  "#define debug(x)",
+		  "#define debugptr(x,y)",
+		  "#define cl()",
+		  "#endif",
+		  "template<class T>void _print_(T x);",
+		  "template<class T>void _print_(T*x,int n=0);",
+		  "template<class T>void _print_(vector<T> x);",
+		  "template<class T>void _print_(set<T> x);",
+		  "template<class T>void _print_(multiset<T> x);",
+		  "template<class T1,class T2>void _print_(map<T1,T2> x);",
+		  "template<class T1,class T2>void _print_(pair<T1,T2> x);",
+		  "template<class T>void _print_(stack<T> x);",
+		  "template<class T>void _print_(queue<T> x);",
+		  "template<class T>void _print_(deque<T> x);",
+		  "template<class T>void _print_(T x){cerr<<x;}",
+		  "template<class T>void _print_(T*x,int n){cerr<<\"{ \";for(int i=0;i<n;i++)cerr<<*(x++)<<\" \";cerr<<\"}\";}",
+		  "template<class T>void _print_(vector<T> x){cerr<<\"{ \";int j=0;for(T i:x){cerr<<j++<<\":\";_print_(i);cerr<<\" \";}cerr<<\"}\";}",
+		  "template<class T>void _print_(set<T> x){cerr<<\"{ \";int j=0;for(T i:x){cerr<<j++<<\":\";_print_(i);cerr<<\" \";}cerr<<\"}\";}",
+		  "template<class T>void _print_(multiset<T> x){cerr<<\"{\";int j=0;for(T i:x){cerr<<j++<<\":\";_print_(i);cerr<<\" \";}cerr<<\"}\";}",
+		  "template<class T1,class T2>void _print_(map<T1,T2> x){cerr<<\"[ \";for(auto i:x){cerr<<\"{\";_print_(i.first);cerr<<\":\";_print_(i.second);cerr<<\"} \";}cerr<<\"]\";}",
+		  "template<class T1,class T2>void _print_(pair<T1,T2> x){cerr<<\"{\";_print_(x.first);cerr<<\",\";_print_(x.second);cerr<<\"}\";}",
+		  "template<class T>void _print_(stack<T> x){cerr<<\"{ \";int j=0;for(T i:x){if(!j)cerr<<\"TOP:\";cerr<<j++<<\":\";_print_(i);cerr<<\" \";}cerr<<\"}\";}",
+		  "template<class T>void _print_(queue<T> x){cerr<<\"{ \";int j=0;for(T i:x){cerr<<j++<<\":\";_print_(i);cerr<<\" \";}cerr<<\"}\";}",
+		  "template<class T>void _print_(deque<T> x){cerr<<\"{ \";int j=0;for(T i:x){cerr<<j++<<\":\";_print_(i);cerr<<\" \";}cerr<<\"}\";}"
+		],
+		"description": "Debugging Environment"
+	  },
+	  "File Input Output System": {
+		"prefix": "fileio",
+		"scope": "cpp",
+		"body": [
+		  "#ifndef ONLINE_JUDGE",
+		  "    freopen(\"debug.txt\",\"w\",stderr);",
+		  "    freopen(\"output.txt\",\"w\",stdout);",
+		  "    freopen(\"input.txt\",\"r\",stdin);",
+		  "#endif"
+		],
+		"description": "Type input in \"input.txt\"\nget output in output.txt\nget details in debug.txt"
+	  },
+	  "Input Array": {
+		"prefix": "inArray",
+		"scope": "cpp",
+		"body": [
+		  "int ${1:arr}[${2:n}];",
+		  "for(int i=0;i<${2:n};i++){",
+		  "    cin>>${1:arr}[i];",
+		  "}"
+		],
+		"description": ""
+	  },
+	  "For loop": {
+		"prefix": "fo",
+		"body": [
+			"for(int ${1:i}=0;${1:i}<${2:n};${1:i}++){",
+			"\t$3",
+		   "}",
+		],
+		"description": "Log output to console"
+	},
+	"Test Cases":{
+		"prefix":"test",
+		"scope":"cpp",
+		"body": [
+			"int t;cin>>t;",
+			"while(t--){",
+			"\t$1",
+			"}"
+		]
+	}
+}
