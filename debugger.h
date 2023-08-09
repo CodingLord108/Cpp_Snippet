@@ -18,7 +18,7 @@ template <class T>void _print_(unordered_set<T> &x);
 template <class T>void _print_(priority_queue<T>x);
 template <class T>void _print_(priority_queue<T,vector<T>,greater<T>>x);
 template <class T>void _print_(stack<T> x);
-template <class T>void _print_(T &x){
+void _print_(long long &x){
     if(sizeof(x)==sizeof(ll)){
         if(abs(x)>=INF){
             if(x<0)cerr<<'-';
@@ -29,6 +29,9 @@ template <class T>void _print_(T &x){
     else{
         cerr<<x;
     }
+}
+template <class T>void _print_(T &x){
+        cerr<<x;
 }
 template <class T>void _print_(T *x, int &n){
     cerr << "{ ";
